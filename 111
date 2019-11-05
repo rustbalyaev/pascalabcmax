@@ -1,0 +1,14 @@
+program MAX;
+var
+  mass : array [1..100] of integer;
+  maximum, i: integer;
+begin
+  randomize;
+  for i := 1 to 100 do
+  mass[i] := random(500);
+  maximum := mass[1];
+  for i := 2 to 100 do
+    if maximum < mass[i] then    
+      maximum := mass[i];        
+  write('Максимальный элемент массива ', maximum);
+end.
